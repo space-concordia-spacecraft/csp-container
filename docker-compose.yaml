@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  ubuntu:
+    container_name: ubuntu-csp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    command: ["sleep", "infinity"]
+    volumes: 
+      - ./:/app
